@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO - Google qidiruv uchun asosiy qism -->
+    <!-- SEO -->
     <title>OQTOSH | Qashqadaryo Milliy Taomlari - Yakkabog' Restorani</title>
-    <meta name="description" content="OQTOSH restorani - Qashqadaryo viloyati Yakkabog' tumanidagi eng mazali milliy taomlar maskani. Shashlik assorti, palov va maxsus Oqtosh kabobi.">
-    <meta name="keywords" content="Oqtosh, Restoran, Yakkabog', Qashqadaryo, Milliy taomlar, Shashlik, Kabob, Menyu, Oqtosh MFY">
-    <meta name="author" content="Azizbek Xalilov">
-
-    <!-- Ijtimoiy tarmoqlarda chiroyli chiqishi uchun (OG Tags) -->
-    <meta property="og:title" content="OQTOSH | Qashqadaryo Milliy Taomlari">
-    <meta property="og:description" content="Yakkabog'dagi eng sara milliy taomlar menyusi bilan tanishing.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1529193591184-b1d58b34ecdf?auto=format&fit=crop&w=600&q=80">
-    <meta property="og:type" content="website">
+    <meta name="description" content="OQTOSH Restorani — Yakkabog'dagi haqiqiy Qashqadaryo milliy taomlari maskani. Bizda eng mazali kaboblar, tandir go'shti va shinam muhit sizni kutmoqda.">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -35,12 +27,7 @@
             --success: #28a745;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--chocolate);
@@ -49,324 +36,66 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .brand {
-            font-family: 'Playfair Display', serif;
-        }
+        h1, h2, h3, h4, .brand { font-family: 'Playfair Display', serif; }
 
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            transition: 0.5s;
-            background: rgba(0,0,0,0.3);
+            position: fixed; top: 0; width: 100%; padding: 20px 50px;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; transition: 0.5s; background: rgba(0,0,0,0.3);
         }
-
-        nav.sticky {
-            padding: 10px 50px;
-            background: rgba(0,0,0,0.9);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-        }
-
-        .brand {
-            color: var(--white);
-            font-size: 2rem;
-            text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--gold);
-        }
+        nav.sticky { padding: 10px 50px; background: rgba(0,0,0,0.9); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+        .brand { color: var(--white); font-size: 2rem; text-decoration: none; font-weight: 700; letter-spacing: 2px; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li a { color: var(--white); text-decoration: none; margin: 0 15px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul li a:hover { color: var(--gold); }
 
         .hero {
-            position: relative;
-            height: 85vh;
+            position: relative; height: 85vh;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
                         url('https://images.unsplash.com/photo-1529193591184-b1d58b34ecdf?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
+            background-size: cover; background-position: center; background-attachment: fixed;
+            display: flex; justify-content: center; align-items: center; text-align: center; color: var(--white);
         }
+        .hero-content h1 { font-size: 5.5rem; letter-spacing: 12px; }
+        .hero-content p { font-size: 1.4rem; letter-spacing: 5px; text-transform: uppercase; }
 
-        .hero-content h1 {
-            font-size: 5.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 12px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
+        section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 3rem; color: var(--gold); text-transform: uppercase; }
+        .section-title .divider { width: 80px; height: 2px; background: var(--gold); margin: 15px auto; }
 
-        .hero-content p {
-            font-size: 1.4rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-        }
+        .menu-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 50px; flex-wrap: wrap; }
+        .tab-btn { padding: 8px 20px; border: 1px solid var(--gold); background: transparent; color: var(--light); cursor: pointer; text-transform: uppercase; transition: 0.3s; }
+        .tab-btn.active, .tab-btn:hover { background: var(--gold); color: var(--chocolate); }
 
-        section {
-            padding: 80px 10%;
-        }
+        .menu-category { display: none; margin-bottom: 60px; position: relative; }
+        .menu-category.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .category-header h3 { font-size: 2.2rem; color: var(--gold); white-space: nowrap; margin-right: 20px; }
+        .category-header .line { flex-grow: 1; height: 1px; background: rgba(197, 160, 89, 0.3); }
 
-        .section-title h2 {
-            font-size: 3rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
+        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 60px; }
+        .menu-item { display: flex; justify-content: space-between; align-items: baseline; position: relative; padding: 10px; border-bottom: 1px solid rgba(197, 160, 89, 0.1); }
+        .item-info h4 { font-size: 1.1rem; text-transform: uppercase; color: var(--white); }
+        .item-info p { font-size: 0.85rem; color: var(--gray); font-style: italic; }
+        .item-price { color: var(--gold); font-weight: 600; margin-left: 20px; }
 
-        .section-title .divider {
-            width: 80px;
-            height: 2px;
-            background: var(--gold);
-            margin: 15px auto;
-        }
+        .delete-item { display: none; position: absolute; right: -25px; top: 50%; transform: translateY(-50%); color: #ff4d4d; cursor: pointer; background: var(--white); border-radius: 50%; padding: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-        .menu-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
+        [contenteditable="true"] { outline: 2px dashed var(--gold); background-color: var(--edit-bg) !important; padding: 2px 5px; }
+        .add-item-btn { display: none; margin-left: 20px; background: var(--success); color: white; border: none; padding: 5px 15px; border-radius: 3px; cursor: pointer; font-size: 0.8rem; }
 
-        .tab-btn {
-            padding: 8px 20px;
-            border: 1px solid var(--gold);
-            background: transparent;
-            color: var(--light);
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+        .admin-controls { position: fixed; bottom: 20px; right: 20px; z-index: 2000; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+        .admin-btn { width: 60px; height: 60px; border-radius: 50%; background: var(--gold); color: var(--chocolate); border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; font-size: 1.5rem; user-select: none; }
+        .save-hint { display: none; background: rgba(0,0,0,0.85); color: white; padding: 15px 20px; border-radius: 8px; font-size: 0.85rem; max-width: 280px; margin-bottom: 10px; border: 1px solid var(--gold); }
 
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--gold);
-            color: var(--chocolate);
-        }
+        footer { background: #1a1108; color: var(--gray); padding: 60px 10% 20px; text-align: center; border-top: 1px solid rgba(197, 160, 89, 0.2); }
+        .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 40px; }
+        .footer-col h3 { color: var(--gold); margin-bottom: 20px; }
 
-        .menu-category {
-            display: none;
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .menu-category.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .category-header h3 {
-            font-size: 2.2rem;
-            color: var(--gold);
-            white-space: nowrap;
-            margin-right: 20px;
-        }
-
-        .category-header .line {
-            flex-grow: 1;
-            height: 1px;
-            background: rgba(197, 160, 89, 0.3);
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px 60px;
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            transition: 0.3s;
-            position: relative;
-            padding: 10px;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
-        }
-
-        .item-info {
-            flex-grow: 1;
-        }
-
-        .item-info h4 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            color: var(--white);
-        }
-
-        .item-info p {
-            font-size: 0.85rem;
-            color: var(--gray);
-            font-style: italic;
-        }
-
-        .item-price {
-            color: var(--gold);
-            font-weight: 600;
-            margin-left: 20px;
-            font-size: 1.1rem;
-        }
-
-        .delete-item {
-            display: none;
-            position: absolute;
-            right: -25px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #ff4d4d;
-            cursor: pointer;
-            background: var(--white);
-            border-radius: 50%;
-            padding: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        }
-
-        [contenteditable="true"] {
-            outline: 2px dashed var(--gold);
-            background-color: var(--edit-bg) !important;
-            padding: 2px 5px;
-        }
-
-        .add-item-btn {
-            display: none;
-            margin-left: 20px;
-            background: var(--success);
-            color: white;
-            border: none;
-            padding: 5px 15px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-
-        .admin-controls {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 2000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: flex-end;
-        }
-
-        .admin-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--gold);
-            color: var(--chocolate);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            transition: 0.3s;
-            user-select: none;
-        }
-
-        .save-hint {
-            display: none;
-            background: rgba(0,0,0,0.85);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            max-width: 280px;
-            margin-bottom: 10px;
-            border: 1px solid var(--gold);
-        }
-
-        footer {
-            background: #1a1108;
-            color: var(--gray);
-            padding: 60px 10% 20px;
-            text-align: center;
-            border-top: 1px solid rgba(197, 160, 89, 0.2);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 20px;
-            font-size: 0.8rem;
-        }
-
-        @media (max-width: 992px) {
-            .menu-grid { grid-template-columns: 1fr; gap: 20px; }
-            .delete-item { right: 0; top: 0; transform: none; }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3rem; }
-            nav { padding: 20px; }
-            nav ul { display: none; }
-            section { padding: 60px 5%; }
-        }
+        @media (max-width: 992px) { .menu-grid { grid-template-columns: 1fr; } .delete-item { right: 0; top: 0; transform: none; } }
     </style>
 </head>
 <body>
@@ -411,164 +140,65 @@
         <div id="menu-container">
             <!-- Menyu kategoriyalari -->
             <div class="menu-category active" data-category="Salatlar">
-                <div class="category-header">
-                    <h3>Salatlar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Salatlar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Oqtosh Salati</h4>
-                            <p class="edit-text">Rukola, cherni pomidor, maxsus sous</p>
-                        </div>
-                        <div class="item-price edit-text">45,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Oqtosh Salati</h4><p class="edit-text">Rukola, cherni pomidor, maxsus sous</p></div><div class="item-price edit-text">45,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Suyuq Taomlar">
-                <div class="category-header">
-                    <h3>Suyuq Taomlar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Suyuq Taomlar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Shurva</h4>
-                            <p class="edit-text">Qo'y go'shti, sabzi, kartoshka</p>
-                        </div>
-                        <div class="item-price edit-text">35,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Shurva</h4><p class="edit-text">Qo'y go'shti, sabzi, kartoshka</p></div><div class="item-price edit-text">35,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Quyuq Taomlar">
-                <div class="category-header">
-                    <h3>Quyuq Taomlar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Quyuq Taomlar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Palov (Osh)</h4>
-                            <p class="edit-text">Choyxona palovi, bedana tuxum bilan</p>
-                        </div>
-                        <div class="item-price edit-text">45,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Palov (Osh)</h4><p class="edit-text">Choyxona palovi, bedana tuxum bilan</p></div><div class="item-price edit-text">45,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Maxsus Taomlar">
-                <div class="category-header">
-                    <h3>Maxsus Taomlar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Maxsus Taomlar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Maxsus Oqtosh Kabobi</h4>
-                            <p class="edit-text">Maxsus marinadlangan yumshoq go'sht</p>
-                        </div>
-                        <div class="item-price edit-text">95,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Maxsus Oqtosh Kabobi</h4><p class="edit-text">Maxsus marinadlangan yumshoq go'sht</p></div><div class="item-price edit-text">95,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Non va Choy">
-                <div class="category-header">
-                    <h3>Non va Choy</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Non va Choy</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Issiq Non</h4>
-                            <p class="edit-text">Tandirdan yangi chiqqan</p>
-                        </div>
-                        <div class="item-price edit-text">5,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Issiq Non</h4><p class="edit-text">Tandirdan yangi chiqqan</p></div><div class="item-price edit-text">5,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Desertlar">
-                <div class="category-header">
-                    <h3>Desertlar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Desertlar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Tiramisu</h4>
-                            <p class="edit-text">Klassik italyancha desert</p>
-                        </div>
-                        <div class="item-price edit-text">35,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Tiramisu</h4><p class="edit-text">Klassik italyancha desert</p></div><div class="item-price edit-text">35,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Ichimliklar">
-                <div class="category-header">
-                    <h3>Ichimliklar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Ichimliklar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Coca-Cola</h4>
-                            <p class="edit-text">1.5L</p>
-                        </div>
-                        <div class="item-price edit-text">12,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Coca-Cola</h4><p class="edit-text">1.5L</p></div><div class="item-price edit-text">12,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Spirtli Ichimliklar">
-                <div class="category-header">
-                    <h3>Spirtli Ichimliklar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Spirtli Ichimliklar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Aroq (Premium)</h4>
-                            <p class="edit-text">0.5L</p>
-                        </div>
-                        <div class="item-price edit-text">120,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Aroq (Premium)</h4><p class="edit-text">0.5L</p></div><div class="item-price edit-text">120,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
 
             <div class="menu-category active" data-category="Sigaretlar">
-                <div class="category-header">
-                    <h3>Sigaretlar</h3>
-                    <div class="line"></div>
-                    <button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button>
-                </div>
+                <div class="category-header"><h3>Sigaretlar</h3><div class="line"></div><button class="add-item-btn" onclick="addNewItem(this)">+ Qo'shish</button></div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-info">
-                            <h4 class="edit-text">Parliament</h4>
-                            <p class="edit-text">Night Blue</p>
-                        </div>
-                        <div class="item-price edit-text">35,000</div>
-                        <i class="fas fa-trash delete-item" onclick="removeItem(this)"></i>
-                    </div>
+                    <div class="menu-item"><div class="item-info"><h4 class="edit-text">Parliament</h4><p class="edit-text">Night Blue</p></div><div class="item-price edit-text">35,000</div><i class="fas fa-trash delete-item" onclick="removeItem(this)"></i></div>
                 </div>
             </div>
         </div>
@@ -577,39 +207,32 @@
     <div class="admin-controls">
         <div class="save-hint" id="save-hint">
             <b>TAHRIRLASH REJIMI:</b><br>
-            - Matnni o'zgartirish uchun ustiga bosing.<br>
-            - Yangi taom qo'shish uchun "+ Qo'shish" tugmasini bosing.<br>
-            - O'chirish uchun savatcha belgisini bosing.
+            - O'zgartirib bo'lgach, "Check" tugmasini bosing.<br>
+            - O'zgarishlar hozirgi brauzeringizda saqlanadi.
         </div>
-        <button class="admin-btn" id="edit-btn" title="Bosib turing (Admin)">
-            <i class="fas fa-edit"></i>
-        </button>
+        <button class="admin-btn" id="edit-btn" title="Bosib turing (Admin)"><i class="fas fa-edit"></i></button>
     </div>
 
     <footer id="contact">
         <div class="footer-grid">
-            <div class="footer-col">
-                <h3>MANZIL</h3>
-                <p>Qashqadaryo viloyati, Yakkabog' tumani,<br>Oqtosh MFY</p>
-            </div>
-            <div class="footer-col">
-                <h3>ISH VAQTI</h3>
-                <p>Dushanba - Yakshanba<br>08:00 - 23:00</p>
-            </div>
-            <div class="footer-col">
-                <h3>BOG'LANISH</h3>
-                <p>Tel: +998 90 444 1771<br>Email: info@oqtosh.uz</p>
-            </div>
+            <div class="footer-col"><h3>MANZIL</h3><p>Qashqadaryo viloyati, Yakkabog' tumani,<br>Oqtosh MFY</p></div>
+            <div class="footer-col"><h3>ISH VAQTI</h3><p>Dushanba - Yakshanba<br>08:00 - 23:00</p></div>
+            <div class="footer-col"><h3>BOG'LANISH</h3><p>Tel: +998 90 444 1771</p></div>
         </div>
-        <div class="copyright">
-            &copy; 2024 OQTOSH RESTAURANT. Barcha huquqlar himoyalangan.<br>
-            Yaratuvchi: Azizbek Xalilov
-        </div>
+        <div class="copyright">&copy; 2024 OQTOSH RESTAURANT. Azizbek Xalilov</div>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
+
+        // Yuklanganda xotiradan ma'lumotlarni o'qish
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedMenu = localStorage.getItem('oqtosh_menu_data');
+            if (savedMenu) {
+                document.getElementById('menu-container').innerHTML = savedMenu;
+            }
+        });
 
         function filterMenu(category) {
             const categories = document.querySelectorAll('.menu-category');
@@ -631,27 +254,18 @@
         editBtn.addEventListener('mouseup', cancelPress);
         editBtn.addEventListener('touchend', cancelPress);
 
-        function startPress(e) {
+        function startPress() {
             if (isEditMode) return;
             pressTimer = window.setTimeout(function() {
                 const pass = prompt("Admin parolini kiriting:");
-                if (pass === "7717") {
-                    toggleEditMode();
-                } else {
-                    alert("Parol noto'g'ri!");
-                }
+                if (pass === "7717") toggleEditMode();
+                else alert("Parol noto'g'ri!");
             }, 1000);
         }
 
-        function cancelPress() {
-            window.clearTimeout(pressTimer);
-        }
+        function cancelPress() { window.clearTimeout(pressTimer); }
 
-        editBtn.addEventListener('click', () => {
-            if (isEditMode) {
-                toggleEditMode();
-            }
-        });
+        editBtn.addEventListener('click', () => { if (isEditMode) toggleEditMode(); });
 
         function toggleEditMode() {
             isEditMode = !isEditMode;
@@ -662,6 +276,11 @@
             document.querySelectorAll('.add-item-btn').forEach(btn => btn.style.display = isEditMode ? 'inline-block' : 'none');
             document.querySelectorAll('.delete-item').forEach(btn => btn.style.display = isEditMode ? 'block' : 'none');
 
+            if (!isEditMode) {
+                // XOTIRAGA SAQLASH
+                localStorage.setItem('oqtosh_menu_data', document.getElementById('menu-container').innerHTML);
+                alert("O'zgarishlar brauzeringizda saqlandi! Sahifani yangilasangiz ham yo'qolmaydi.");
+            }
             editBtn.innerHTML = isEditMode ? '<i class="fas fa-check"></i>' : '<i class="fas fa-edit"></i>';
         }
 
@@ -669,22 +288,11 @@
             const grid = btn.parentElement.nextElementSibling;
             const newItem = document.createElement('div');
             newItem.className = 'menu-item';
-            newItem.innerHTML = `
-                <div class="item-info">
-                    <h4 class="edit-text" contenteditable="true">Yangi taom nomi</h4>
-                    <p class="edit-text" contenteditable="true">Taom haqida qisqacha ma'lumot</p>
-                </div>
-                <div class="item-price edit-text" contenteditable="true">0</div>
-                <i class="fas fa-trash delete-item" style="display:block" onclick="removeItem(this)"></i>
-            `;
+            newItem.innerHTML = `<div class="item-info"><h4 class="edit-text" contenteditable="true">Yangi taom nomi</h4><p class="edit-text" contenteditable="true">Taom haqida qisqacha ma'lumot</p></div><div class="item-price edit-text" contenteditable="true">0</div><i class="fas fa-trash delete-item" style="display:block" onclick="removeItem(this)"></i>`;
             grid.appendChild(newItem);
         }
 
-        function removeItem(btn) {
-            if(confirm("Ushbu taomni menyudan o'chirmoqchimisiz?")) {
-                btn.parentElement.remove();
-            }
-        }
+        function removeItem(btn) { if(confirm("O'chirmoqchimisiz?")) btn.parentElement.remove(); }
 
         window.addEventListener("scroll", () => {
             const nav = document.querySelector("nav");
